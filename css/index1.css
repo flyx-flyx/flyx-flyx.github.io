@@ -1,0 +1,381 @@
+.wrapper{
+    /*版心*/
+    margin:0 auto;
+    width: 1200px;
+}
+
+body{
+    background-color: black;
+}
+
+
+/* 头部 */
+.header{
+    width: 100%;
+    height: 80px;
+    background:linear-gradient(to right,#03045e,#2d2f99,#c9f0f7);
+    position: fixed;
+    /* border-bottom:2px solid grey;感觉边框线没有阴影好看 */
+    box-shadow: 0px 5px 15px rgb(67, 68, 68);
+    /* 让导航栏处于绝对定位的图片的上面 */
+    z-index:1000;
+}
+
+.header .wrapper{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.logo h1{
+    /* display: block; */
+    color:#c9f0f7;
+    width: 195px;
+    height: 40px;
+    font-size: 40px;
+    margin-right: 100px;
+}
+.nav ul{
+    display: flex;
+    /* flex加给父级会让子级拉伸至父级 */
+}
+
+.nav li{
+    margin-right: 32px;
+    margin-left: 32px;
+}
+.nav a{
+    color:#c9f0f7;
+    display:block;
+    padding: 6px 8px;
+    line-height: 28px;
+    font-size: 22px;
+}
+.nav li:hover{
+    background-color:rgb(3, 7, 82);
+    border-radius:16px;
+    cursor:pointer;
+}
+.search{
+    width: 270px;
+    height: 40px;
+    background-color: #f3f5f7;
+    border-radius:20px;
+    margin-left: 90px;
+    padding-left: 30px;
+    display: flex;
+}
+.search input{
+    /* 设置弹性伸缩比 */
+    flex:1;
+    
+    border:0;
+    background:transparent;
+    /* 清楚点击时的边框 */
+    outline:none;  
+}
+.search a{
+    align-self: center;
+    width: 30px;
+    height: 30px;
+    /* 父级已flex，子级变为弹性盒子，所以不用display宽高也对a标签生效 */
+    background-image: url(../images/搜索.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* 轮播图 */
+.slider{
+    width:1000px;
+    height:600px;
+    position: relative;
+    top:150px;
+    margin: auto;
+    /* overflow: hidden; */
+}
+.imglist{
+    width: 100%;
+    height: 100%;
+}
+.imglist a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+
+}
+.slider .imglist img{
+    width: 100%;
+    height: 100%;
+
+}
+/* 让第一张图展示，其余图不展示 */
+.show{
+    display: block !important;;
+}
+
+.buttonleft{
+    width: 40px;
+    height: 600px;
+    color:#f3f5f7;
+    position: absolute;
+    top:0;
+    left:0;
+    text-align: center;
+    line-height: 700px;
+    font-size: 50px;
+}
+.buttonright{
+    width: 40px;
+    height: 600px;
+    color:#f3f5f7;
+    position: absolute;
+    top:0;
+    right:0;
+    text-align: center;
+    line-height: 700px;
+    font-size: 50px;
+}
+.buttonleft:hover{
+    background-color: #00000050;
+    color:#fff;
+    cursor:pointer;
+}
+.buttonright:hover{
+    background-color: #00000050;
+    color:#fff;
+    cursor:pointer;
+}
+.slider .btnlist{
+    position:absolute;
+    bottom: 20px;
+    left:50%;
+    transform: translate(-50%,0);
+    display: flex;
+}
+.slider span{
+    background: #aaa6a6;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    display: block;
+    margin-right: 20px;
+}
+.slider span:last-child{
+    margin-right: 0px;
+}
+.spa{
+    background-color: rgba(0, 0, 255, 0.909) !important;
+}
+
+
+/* 第一块：文字引入*/
+.banner{
+    padding-top: 350px;
+    height: 500px;
+    width: 100%;
+}
+.banner h1{
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color:transparent;
+    background-image: linear-gradient(103deg,rgb(252,225,208) 28%,rgb(84, 22, 183) 40%,rgb(187, 204, 247)80%);
+    background-clip: text;
+}
+.banner p{
+    color: white;
+    font-size: 3pc;
+    text-align: center;
+    color:transparent;
+    background-image: linear-gradient(103deg,rgb(252,225,208) 28%,rgb(84, 22, 183) 40%,rgb(187, 204, 247)80%);
+    background-clip: text;
+}
+
+
+/* 第二块：图片与文字展示 */
+.showcase{
+    width: 100%;
+    height: 700px;
+    background-color: black;
+    padding-top: 300px;
+    padding-right:150px;
+    display: flex;
+    justify-content: space-between;
+}
+.showcase .showimg{
+    width: 600px;
+    height:400px;
+}
+.showcase img{
+    width:100%;
+    height:100%;
+}
+.showcase .text{
+    color: white;
+    width:500px;
+    height:400px;
+}
+.showcase p{
+    font-size:1.1pc;
+    text-indent: 2em;
+}
+.brief{
+    width: 100%;
+    height: 650px;
+    background-color: black;
+    padding-top: 250px;
+    padding-left: 110px;
+    /* padding-bottom: 50px; */
+    display: flex;
+    justify-content:space-between;
+}
+.brief .brief-img{
+    width: 610px;
+    height: 400px;
+}
+.brief img{
+    width: 100%;
+    height: 100%;
+}
+.brief P{
+    font-size:1.1pc;
+}
+.brief .brief-text{
+    color: white;
+    width: 600px;
+    height: 400px;
+}
+.showcase2{
+    width: 100%;
+    height: 650px;
+    background-color: black;
+    padding-top: 250px;
+    padding-right:150px;
+    /* padding-bottom: 100px; */
+    display: flex;
+    justify-content: space-between;
+}
+.showcase2 .showimg2{
+    width: 600px;
+    height:400px;
+}
+.showcase2 img{
+    width:100%;
+    height:100%;
+}
+.showcase2 .text2{
+    color: white;
+    width:500px;
+    height:400px;
+}
+.showcase2 p{
+    font-size:1.1pc;
+    text-indent: 2em;
+}
+
+
+/* 第三块：动态框 */
+.actbox{
+    height: 350px;
+    margin-top: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    /* overflow: hidden; */
+}
+.act{
+    background-color: #021b34;
+    width: 650px;
+    height: 300px;
+    color:rgb(14, 186, 234);
+    text-align: center;
+    line-height: 300px;
+    font-size: 100px;
+    letter-spacing: 6px;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    z-index: 5;
+}
+/* 有两点要注意：绝对相对定位的设置；层级的设置 */
+/* 父元素设置了层级，子元素才好层级比较（不然就是auto，根据书写顺序） */
+/* .act为5，子元素继承了5，伪元素也继承了，但before-5就变成了0，就不会覆盖文本啦 */
+.act::before{
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    background-image: conic-gradient(
+        transparent,rgb(14, 186, 234),transparent 30%
+    );
+    z-index:-5;
+    animation: rotate 4s linear infinite;
+}
+.act::after{
+    content: '';
+    background-color: black;
+    border-radius: 25px;
+    position:absolute;
+    inset:6px;
+    z-index: -1;
+}
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* 首页底部 */
+.bottom-img{
+    margin-top: 220px;
+    background-image: url(../images/首页底部图.jpg);
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+.bottom-center{
+    position: absolute;
+    top:50%;
+    left:50%;
+    /* 此时只是左上角居中哦 */
+    transform: translate(-50%,-50%);
+    width:100%;
+    padding: 0 20px;
+    text-align: center;
+}
+.bottom-center .bottom-title{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 600;
+}
+.bottom-center .btns{
+    margin-top: 30px;
+}
+.bottom-center button{
+    height: 55px;
+    width: 170px;
+    border-radius: 6px;
+    border: 2px solid white;
+    margin:0 10px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
+    cursor: pointer;
+    outline:none;
+    /* 1秒内过渡变化 */
+    transition:all 1 ease;
+}
+.bottom-center button{
+    color:#fff;
+    background: none;
+}
+.bottom-center button:hover{
+    color: black;
+    background: white;
+}

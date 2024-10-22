@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>介绍</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index2.css">
+</head>
+<body>
+    <!--头部-->
+    <div class="header">
+        <div class="wrapper">
+            <div class="logo">
+                <h1>OpenJT</h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">介绍</a></li>
+                    <li><a href="about (2).html">联系</a></li>
+                    <li><a href="about (3).html">登录</a></li>
+                </ul>
+            </div>
+            <div class="search">      
+                    <input type="text" placeholder="请输入关键词">
+                    <a href="#"></a>
+            </div>             
+        </div>
+    </div>
+
+    <!-- 小动画的卡片 -->
+    <div class="intro">
+        <div class="intro-text">
+            <h3>Hello,It's OpenJT!</h3>
+            <h1>Look at below to learn about us.</h1>
+            <h3>And OpenJT is a new world.</h3>
+            <br>
+            <p>We look forward to your joining us!</p>
+        </div>
+        <div class="intro-img">
+            <img src="images/introimg.jpg">    
+        </div>
+    </div>
+
+    <!-- 第一块:风琴 -->
+    <div class="banner">
+        <h1 class="about">FUNCTIONS AND FIELDS</h1>
+        <p>我们存在于各个领域</p>
+    </div>
+    <!-- 风琴 -->
+    <div>
+        <div class="shell">
+            <div class="box">
+                <img src="images/box1.jpg" alt="">
+                <span>driving</span>
+            </div>
+            <div class="box">
+                <img src="images/box2.jpg" alt="">
+                <span>agriculture</span>
+            </div>
+            <div class="box">
+                <img src="images/box3.jpg" alt="">
+                <span>human face</span>
+            </div>
+            <div class="box">
+                <img src="images/box4.jpeg" alt="">
+                <span>robot</span>
+            </div>
+            <div class="box">
+                <img src="images/box5.jpg" alt="">
+                <span>medicine</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第二块：图表 -->
+    <div class="banner1">
+        <h1 class="about1">USER GROWTH</h1>
+        <p>用户增长表</p>
+    </div>
+    <!-- 图表 -->
+    <div class="card" id="chart">
+    </div>
+    <!-- 注意下面这两个script的顺序！这是为什么你第一遍echarts未定义的原因 -->
+    <script src="index.js/echarts.js"></script>
+    <script>
+        // 获取正常节点
+        var chardom = document.getElementById('chart')
+        // 转化成为echarts的对象节点
+        var mychart = echarts.init(chardom);
+        // 数据配置
+        var option;
+        option = {
+            xAxis:{
+                type:'category',
+                data:['2020','2021','2022','2023','2024']
+            },
+            yAxis:{
+                type:'value'
+            },
+            series:[
+                {
+                    data:[150,550,890,1900,3400],
+                    type:'line'
+                }
+            ]
+        }
+        // 数据与节点结合
+        option&&mychart.setOption(option)
+    </script>
+
+    <!-- 第三块：人物介绍-->
+    <div class="banner2">
+        <h1 class="about2">CHARACTERS INTRO</h1>
+        <p>人物介绍</p>
+    </div>
+    <!-- 人物小卡片们  -->
+    <div class="renwu">
+        <div class="ren">
+            <div class="photo">
+                <img src="images/renwu1.jpg">
+            </div>
+            <h1>Amy</h1>
+            <h2>designer</h2>
+            <p>Her profession is to create designs, plans, or blueprints for various products, structures, or systems. This can include fashion designers, graphic designers, interior designers, industrial designers, and many others.</p>
+        </div>
+        <div class="ren".>
+            <div class="photo">
+                <img src="images/renwu2.jpg">
+            </div>
+            <h1>Linda</h1>
+            <h2>pioneer</h2>
+            <p>She needs to have a strong foundation in programming languages such as Java, Python, C++, or JavaScript. In addition, knowledge of software development frameworks, databases, and operating systems is essential.</p>
+        </div>
+        <div class="ren">
+            <div class="photo">
+                <img src="images/renwu3.jpg">
+            </div>
+            <h1>Asia</h1>
+            <h2>developer</h2>
+            <p>Her job involves various stages of software development, coding, testing, and maintenance. They work closely with project managers, and other stakeholders to understand the needs of the end user and deliver solutions that meet needs.</p>
+        </div>
+    </div>
+
+    <!-- 尾部 -->
+    <div class="footer">
+            <div class="top">创新驱动&nbsp;&nbsp;智慧赋能&nbsp;&nbsp;引领未来</div>
+            <div class="bottom">
+                <p>
+                    <a href="#">关于我们</a> |
+                    <a href="#">帮助中心</a> |
+                    <a href="#">商务合作</a> |
+                    <a href="#">搜索推荐</a> |
+                    <a href="#">友情链接</a> |
+                    <a href="#">更多咨询</a>
+                </p>
+                <div class="copyright">Copyright@OpenJT</div>
+            </div>
+
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index1.css">
+</head>
+<body>
+    <!--头部-->
+    <div class="header">
+        <div class="wrapper">
+            <div class="logo">
+                <h1>OpenJT</h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">介绍</a></li>
+                    <li><a href="about (2).html">联系</a></li>
+                    <li><a href="about (3).html">登录</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                    <input type="text" id="input" placeholder="请输入关键词">
+                    <a href="#"></a>
+            </div>             
+        </div>
+    </div>
+
+    <!-- 轮播图 -->
+    <div class="slider">
+        <div class="imglist">
+            <a href="#" class="show"><img src="images/slider1.jpg" alt=""></a>
+            <a href="#"><img src="images/slider2.webp" alt=""></a>
+            <a href="#"><img src="images/slider3.jpg" alt=""></a>
+        </div>
+        <div class="buttonleft">&lt;</div>
+        <div class="buttonright">&gt;</div>
+        <div class="btnlist">
+            <span class="spa"></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- 第一块：文字引入 -->
+    <div class="banner">
+        <h1 class="about">Welcome to OpenJT！</h1>
+        <p>在这里，开启你的AI新世界吧！</p>
+    </div>
+
+    <!-- 第二块：图片与文字展示 -->
+    <div class="showcase">
+        <div class="showimg"><img src="images/showcase.jpg" ></div>
+        <div class="text">
+            <h2>WHAT WE ARE DOING?</h2>
+            <br>
+            <p>在科技日新月异的今天，人工智能（AI）如同一股不可阻挡的潮流，正以前所未有的速度渗透到我们生活的方方面面。它不仅改变了我们的工作方式，更在悄然重塑着人类社会的面貌。在这个充满未知与可能的新时代，AI如同一把钥匙，为我们打开了通往未来世界的大门。</p>
+            <p>通俗来说，“AI+”就是“AI+各个行业”，但这并不是简单的两者相加，而我们正在做的，就是利用人工智能技术以及互联网平台，让人工智能与传统行业、新型行业进行深度融合，创造新的发展生态。它代表一种新的社会形态，即充分发挥“人工智能”在社会中的作用，将“人工智能”的创新成果深度融合于经济、社会各域之中，提升全社会的创新力和生产力，形成更广泛的以互联网为基础设施和实现工具的经济发展新形态。</p>
+        </div>
+    </div>
+    <div class="brief">
+        <div class="brief-text">
+            <h2>INVOLVED FIELDS:</h2>
+            <br><br>
+            <p>1、机器学习：是我们的重要分支，专注于开发算法和统计模型，使计算机能够基于数据进行学习和做出决策。</p>
+            <p>2、自然语言处理（NLP）：致力于使计算机能够理解、解释和生成人类语言。</p>
+            <p>3、计算机视觉：让计算机能够从图像和视频中提取信息，进行对象识别、场景重建等。</p>
+            <p>4、认知科学：研究人类及其他动物的认知过程，将心理学、神经科学和哲学的研究应用于开发智能机器。</p>
+            <p>5、神经科学：研究神经系统的工作原理，尤其是大脑。</p>
+        </div>
+        <div class="brief-img"><img src="images/brief.jpg" ></div>
+    </div>
+    <div class="showcase2">
+        <div class="showimg2"><img src="images/showcase2.jpg" ></div>
+        <div class="text2">
+            <h2>LEARN ABOUT US!</h2>
+            <br>
+            <p>作为一家专业的AI公司，我们凭借高效、精准和智能的文案创作能力，帮助客户在激烈的市场竞争中脱颖而出。通过严格的数据隐私保护措施和持续的效果评估优化，我们致力于为客户提供最优质的服务。未来，我们将继续探索和创新，推动AI技术在品牌推广领域的应用，为更多企业带来革命性的改变。</p>
+            <p>我们深知效果评估的重要性。通过对文案投放后的实际数据反馈和用户评价进行系统分析，我们可以及时调整和优化推广策略，确保每一次推广活动都能达到最佳效果。这种数据驱动的方法不仅提高了品牌推广的精准度，也为企业带来了更高的投资回报率。</p>
+            <p>让我们一起迎接智能新时代，共同开启无限可能！</p>
+        </div>
+    </div>
+    <!-- 第三块：动态框 -->
+    <div class="actbox">
+        <div class="act">OPENJT</div>
+    </div>
+    <!-- 底部 -->
+     <div class="bottom-img">
+        <div class="bottom-center">
+            <div class="bottom-title">和我们一起开启这段AI之旅吧！</div>
+            <div class="btns">
+                <button>了解更多</button>
+                <button>提供建议</button>
+            </div>
+        </div>
+    </div>
+    <script>   
+        // 轮播图
+        document.addEventListener('DOMContentLoaded', function() {
+        autoPlay();
+        });
+        let imglist = document.querySelectorAll('.imglist>a');
+        let left = document.querySelector('.buttonleft');
+        let right = document.querySelector('.buttonright');
+        let btnlist = document.querySelectorAll('.btnlist>span');
+        let index = 0;
+        let time;
+        function autoPlay(){     
+            time = setInterval(()=>{
+                for(let i = 0;i<imglist.length;i++){
+                    imglist[i].classList.remove('show');
+                    btnlist[i].classList.remove('spa');
+                }
+                // index++;
+                index==imglist.length-1?index=0:index++;
+                imglist[index].classList.add('show');
+                btnlist[index].classList.add('spa');
+            },3000)
+        }
+        left.onclick=function(){
+            index==0?index=imglist.length-1:index--;
+            for(let i = 0;i<imglist.length;i++){
+                    imglist[i].classList.remove('show');
+                    btnlist[i].classList.remove('spa');
+                }
+            imglist[index].classList.add('show');
+            btnlist[index].classList.add('spa');
+        }
+        right.onclick=function(){
+            index==imglist.length-1?index=0:index++;
+            for(let i = 0;i<imglist.length;i++){
+                    imglist[i].classList.remove('show');
+                    btnlist[i].classList.remove('spa');
+                }
+            imglist[index].classList.add('show');
+            btnlist[index].classList.add('spa');
+        }      
+    </script>
+</body>
+</html>

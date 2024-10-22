@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index4.css">
+</head>
+<body>
+    <!--头部-->
+    <div class="header">
+        <div class="wrapper">
+            <div class="logo">
+                <h1>OpenJT</h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">介绍</a></li>
+                    <li><a href="about (2).html">联系</a></li>
+                    <li><a href="about (3).html">登录</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                    <input type="text" placeholder="请输入关键词">
+                    <a href="#"></a>
+            </div>             
+        </div>
+    </div>
+
+    <!-- 主体 -->
+    <div class="box">
+        <div class="shell">
+            <h2 class="title">LOGIN</h2>
+            <input type="textname" id="username" placeholder="用户名">
+            <input type="password" id="password" placeholder="密码">
+            <input type="submit" value="登录" id="submit">
+            <div class="footer">
+                <div class="remember">
+                    <input type="checkbox" id="rememberme">
+                    <!-- label 标签的主要作用是定义表单控件（如文本框、复选框、单选按钮等）的标注或说明。它通过 for 属性与表单控件的 id 属性关联起来，这样当用户点击 label 时，与之关联的表单控件会获得焦点或被激活。 -->
+                    <label for="rememberme">记住我</label>
+                </div>
+                <button id="register">去注册</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('register').addEventListener('click',function(){
+        var title = document.querySelector('.shell .title');
+        var submit = document.getElementById('submit');
+        var label = document.querySelector('.remember');
+        var register =document.getElementById('register');
+        if(title.innerText === 'LOGIN'){
+            title.innerText = 'REIGESTER';
+            submit.value = '注册';
+            label.style.opacity = '0';
+            register.innerText = '去登录';
+        } else {
+            title.innerText = 'LOGIN';
+            submit.value = '登录';
+            label.style.opacity = '1';
+            register.innerText = '去注册'; 
+        }
+    })
+</script>
+</html>

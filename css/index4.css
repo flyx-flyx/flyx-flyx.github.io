@@ -1,0 +1,181 @@
+.wrapper{
+    /*版心*/
+    margin:0 auto;
+    width: 1200px;
+}
+
+body{
+    height: 100vh;
+    background-image: url(../images/登录页面.jpg);
+    background-size: cover;
+}
+
+/* 头部 */
+.header{
+    width: 100%;
+    height: 80px;
+    opacity: 0.7;
+    background-color: rgb(11, 10, 113);
+;
+    position: fixed;
+    /* border-bottom:2px solid grey;感觉边框线没有阴影好看 */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    /* 让导航栏处于绝对定位的图片的上面 */
+    z-index:1000;
+}
+
+.header .wrapper{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.logo h1{
+    /* display: block; */
+    color: white;
+    width: 195px;
+    height: 40px;
+    font-size: 40px;
+    margin-right: 100px;
+}
+.nav ul{
+    display: flex;
+    /* flex是加给父级且会让子级拉伸至父级哦 */
+}
+
+.nav li{
+    margin-right: 32px;
+    margin-left: 32px;
+}
+.nav a{
+    display:block;
+    padding: 6px 8px;
+    line-height: 28px;
+    font-size: 22px;
+    color: white;
+}
+.nav li:hover{
+    background-color:rgb(203, 227, 249);
+    border-radius:16px;
+    cursor:pointer;
+}
+.nav li:hover a{
+    color:rgb(13, 13, 134);
+}
+.search{
+    width: 270px;
+    height: 40px;
+    background-color: #f3f5f7;
+    border-radius:20px;
+    margin-left: 90px;
+    padding-left: 30px;
+    display: flex;
+}
+.search input{
+    /* 设置弹性伸缩比 */
+    flex:1; 
+    border:0;
+    background:transparent;
+    /* 清楚点击时的边框 */
+    outline:none;  
+}
+.search a{
+    align-self: center;
+    width: 30px;
+    height: 30px;
+    /* 父级已flex，子级变为弹性盒子，所以不用display宽高也对a标签生效 */
+    background-image: url(../images/搜索.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 登录卡片 */
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 170px;
+}
+.shell{
+    width: 550px;
+    background-color: #ffffff49;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    border-radius: 50px;
+    box-shadow: 0 0 50px white inset;
+    animation: zoomIn 1s ease forwards;
+}
+.shell .title{
+    font-size: 70px;
+    margin-bottom: 30px;
+    color: rgb(13, 11, 146);
+}
+input[type="textname"],
+input[type="password"]{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    padding:5px 20px 0 20px;
+    font-size: 18px;
+    box-sizing: border-box;
+    background: rgba(255,255,255, .5);
+    transition: 0.4s;
+}
+input[type="textname"]:hover,
+input[type="password"]:hover{
+    background: rgba(255,255,255, 0);
+    border: 5px solid white;
+}
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 100px;
+    border: none;
+    background-color:rgba(13, 11, 146, 0.781);
+    cursor: pointer;
+    font-size: 20px;
+    color:white;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.footer .remember{
+    opacity:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+input[type="checkbox"]{
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+#register{
+    border:none;
+    background-color: #ffffff00;
+    font-size: 18px;
+}
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
