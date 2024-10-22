@@ -121,6 +121,7 @@
             },3000)
         }
         left.onclick=function(){
+            clearInterval(time);
             index==0?index=imglist.length-1:index--;
             for(let i = 0;i<imglist.length;i++){
                     imglist[i].classList.remove('show');
@@ -128,8 +129,10 @@
                 }
             imglist[index].classList.add('show');
             btnlist[index].classList.add('spa');
+            autoPlay()
         }
         right.onclick=function(){
+            clearInterval(time);
             index==imglist.length-1?index=0:index++;
             for(let i = 0;i<imglist.length;i++){
                     imglist[i].classList.remove('show');
@@ -137,6 +140,7 @@
                 }
             imglist[index].classList.add('show');
             btnlist[index].classList.add('spa');
+            autoPlay()
         }      
     </script>
 </body>
